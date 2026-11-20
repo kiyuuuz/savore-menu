@@ -130,7 +130,16 @@ function thumb(file){return new Promise(r=>{const fr=new FileReader();fr.onload=
 const LAB=["","In progress","Preparing your order","Ready to pick up","Picked up · customer confirmed"];
 const cart={};let pend=null;let view="cart",who="",phone="",proof="",pmsg="",ord=null,smsg="";
 try{ord=JSON.parse(localStorage.getItem("savore_order")||"null")}catch(_){}
-/* ===== SETUP: paste your Firebase web app config here (see README.md) ===== */
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAEB82tGAzDEjlFcAZ9WsCPLkgiGEB0PaA",
+  authDomain: "soverass.firebaseapp.com",
+  projectId: "soverass",
+  storageBucket: "soverass.firebasestorage.app",
+  messagingSenderId: "5360929708",
+  appId: "1:5360929708:web:858b92831541af22cb8809",
+  measurementId: "G-H2VVY97SZ3"
+};
 const FIREBASE_CONFIG={apiKey:"PASTE_API_KEY",authDomain:"PASTE.firebaseapp.com",projectId:"PASTE_PROJECT_ID",appId:"PASTE_APP_ID"};
 const STAFF_EMAIL="nuriftyayuni@gmail.com";   // the staff login you create in Firebase; staff only type its password
 let auth=null;
